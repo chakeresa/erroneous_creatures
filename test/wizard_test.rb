@@ -2,6 +2,7 @@ gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/wizard'
+require 'pry'
 
 class WizardTest < Minitest::Test
   def test_has_name
@@ -20,7 +21,7 @@ class WizardTest < Minitest::Test
   end
 
   def test_is_not_always_bearded
-    wizard = Wizard.new("Valerie", bearded: false)
+    wizard = Wizard.new("Valerie", false)
     refute wizard.bearded?
   end
 
